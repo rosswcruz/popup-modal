@@ -305,7 +305,14 @@ sessionStorage.setItem("reload", 100); var bust = 0; window.onbeforeunload = fun
 
 
 
-document.querySelector("html").ontouchstart = function () {
+document.querySelector("orderX").ontouchstart = function () {
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
+return true;
+};
+
+
+
+document.querySelector("orderX").onmousedown = function () {
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
 return true;
 };

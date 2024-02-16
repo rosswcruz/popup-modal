@@ -24,8 +24,8 @@ body {
 }
 
 #modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--subtle.js-modal__close, #modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--primary {
-margin-top: 2px!important;
-margin-bottom: 2px!important;
+margin-top: 5px!important;
+margin-bottom: 5px!important;
 }
 
 #modal-title-1 {

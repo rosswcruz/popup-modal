@@ -3,6 +3,14 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+* {
+-ms-overflow-style: none;
+scrollbar-width: none;
+overflow-y: scroll;
+}
+*::-webkit-scrollbar {
+display: none;
+}
 body {
 background: #467fae;
 font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;

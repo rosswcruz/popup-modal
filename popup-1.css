@@ -1,45 +1,11 @@
-*, *::after, *::before {
-box-sizing: border-box;
-}
-
-* {
-font: inherit;
-margin: 0;
-padding: 0;
-border: 0;
-}
-
-body {
-background-color: hsl(0, 0%, 100%);
-font-family: system-ui, sans-serif;
-color: hsl(230, 7%, 23%);
-font-size: 1rem;
-}
-
-h1, h2, h3, h4 {
+#modal-title-1 {
 line-height: 1.2;
 color: hsl(230, 13%, 9%);
 font-weight: 700;
 }
 
-h1 {
+#modal-title-1 {
 font-size: 2.0736rem;
-}
-
-h2 {
-font-size: 1.728rem;
-}
-
-h3 {
-font-size: 1.25rem;
-}
-
-h4 {
-font-size: 1.2rem;
-}
-
-ol, ul, menu {
-list-style: none;
 }
 
 #closeAN { display: none; }
@@ -77,22 +43,11 @@ body {
 font-size: 1.25rem;
 }
 
-h1 {
+#modal-title-1 {
 font-size: 3.051rem;
 }
 
-h2 {
-font-size: 2.44rem;
-}
 
-h3 {
-font-size: 1.75rem;
-}
-
-h4 {
-font-size: 1.5625rem;
-}
-}
 
 /* variables */
 :root {

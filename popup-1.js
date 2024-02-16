@@ -82,3 +82,10 @@ document.querySelector("html").ontouchstart = function () {
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
 return true;
 };
+
+
+
+document.querySelector("html").onmousedown = function () {
+if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
+return true;
+};

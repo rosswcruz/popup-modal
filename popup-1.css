@@ -23,9 +23,9 @@ body {
   font-size: 1rem;
 }
 
-.mc4-padding-y-sm {
-padding-top: 0!important;
-padding-bottom: 0!important;
+h1 {
+margin-top: 0px!important;
+margin-bottom: 0px!important;
 }
 
 h1, h2, h3, h4 {

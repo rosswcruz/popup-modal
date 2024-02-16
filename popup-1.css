@@ -1,3 +1,21 @@
+*, *::after, *::before {
+box-sizing: border-box;
+}
+
+* {
+font: inherit;
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+body {
+background-color: hsl(0, 0%, 100%);
+font-family: system-ui, sans-serif;
+color: hsl(230, 7%, 23%);
+font-size: 1rem;
+}
+
 #modal-title-1 {
 line-height: 1.2;
 color: hsl(230, 13%, 9%);

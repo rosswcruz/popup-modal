@@ -23,6 +23,11 @@ body {
   font-size: 1rem;
 }
 
+.mc4-padding-md {
+margin-top: 10px!important;
+margin-bottom: 10px!important;
+}
+
 #modal-title-1 {
 margin-top: 0px!important;
 margin-bottom: 0px!important;

@@ -80,18 +80,9 @@ textarea {
   vertical-align: top;
 }
 
-a {
-  color: hsl(250, 84%, 54%);
-}
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-img, video, svg {
-  display: block;
-  max-width: 100%;
 }
 
 @media (min-width: 64rem) {

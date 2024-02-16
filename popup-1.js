@@ -1,4 +1,3 @@
-<script>
 // File#: _1_modal-window
 // Usage: codyhouse.co/license
 (function() {
@@ -220,9 +219,9 @@ for( var i = 0; i < modalArrays.length; i++) {
 });
 }
 }());
-</script>
 
-<script>
+
+
 var width = window.innerWidth;
 if (width <= 520) {
 
@@ -256,18 +255,18 @@ myFunc = function(){};
 history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, window.location.href); window.onpopstate = () => history.forward(); } } catch (o) {} }();
 
 };
-</script>
 
-<script>
+
+
 document.querySelector("#modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--primary").onclick = function remOO() { document.querySelector(".mc4-btn").click();
 };
-</script>
 
-<script>
+
+
 if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); } else { };
-</script>
 
-<script>
+
+
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else {
 
 var width = window.innerWidth;
@@ -305,11 +304,10 @@ myFunc2 = function(){};
 sessionStorage.setItem("reload", 100); var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 };
-</script>
 
-<script>
+
+
 document.querySelector("html").ontouchstart = function () {
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
 return true;
 };
-</script>

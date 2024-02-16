@@ -33,7 +33,9 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
 };
 
 
+
 if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); } else { };
+
 
 
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else {
@@ -73,6 +75,7 @@ myFunc2 = function(){};
 sessionStorage.setItem("reload", 100); var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 };
+
 
 
 document.querySelector("html").ontouchstart = function () {

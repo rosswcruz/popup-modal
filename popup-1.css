@@ -23,9 +23,9 @@ body {
   font-size: 1rem;
 }
 
-#modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--subtle.js-modal__close {
-margin-top: 10px!important;
-margin-bottom: 10px!important;
+#modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--subtle.js-modal__close, #modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--primary {
+margin-top: 1px!important;
+margin-bottom: 1px!important;
 }
 
 #modal-title-1 {

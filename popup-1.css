@@ -22,6 +22,12 @@ body {
   font-family: system-ui, sans-serif;
   font-size: 1rem;
 }
+#modal-name-1 {
+position: fixed!important;
+top: 50%!important;
+left: 50%!important;
+transform: translate(-50%, -50%)!important;
+}
 
 #modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--subtle.js-modal__close, #modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--primary {
 margin-top: 5px!important;

@@ -15,8 +15,8 @@ body {
 }
 .modalOX {
   opacity: 1;
-width: 100vw!important;
-height: 100vh!important;
+width: 900px!important;
+height: 800px!important;
 background-color: #000;
   position: fixed;
   top: 50%;

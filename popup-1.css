@@ -12,7 +12,6 @@ overflow-y: scroll;
 display: none;
 }
 body {
-background: #fff;
 font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
 }
 @keyframes fade {

@@ -83,9 +83,13 @@ return true;
 
 
 
-function addEvent(obj, evt, fn) { if (obj.addEventListener) { obj.addEventListener(evt, fn, false); } else if (obj.attachEvent) { obj.attachEvent("on" + evt, fn); } } addEvent(window,"load",function(e) { addEvent(document, "mouseout", function(e) { e = e ? e : window.event; var from = e.relatedTarget || e.toElement; if (!from || from.nodeName == "HTML") {
+var mouseY = 0;
+var topValue = 0;
+window.addEventListener("mouseout",function(e){
+mouseY = e.clientY;
+if(mouseY<topValue) {
 
 document.querySelector('.modalOX').style.visibility = "visible"; setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 
-};
-}); });
+}
+}, false);

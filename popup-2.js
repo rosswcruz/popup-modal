@@ -256,7 +256,7 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
 
 
 
-document.querySelector("#modal-name-1 > div > footer > div > button.mc4-btn.mc4-btn--primary").onclick = function remOO() { document.querySelector(".mc4-btn").click();
+document.querySelector("#closeXO").onclick = function remOO() { document.querySelector(".mc4-btn").click();
 };
 
 
@@ -278,4 +278,17 @@ var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; ret
 window.onbeforeunload = null;
 
 }
-});                                                                                                                                                                                                                                       var mouseY = 0var topValue = 
+});
+
+
+
+var mouseY = 0;
+var topValue = 0;
+window.addEventListener("mouseout",function(e){
+mouseY = e.clientY;
+if(mouseY<topValue) {
+
+document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+
+}
+}, false);

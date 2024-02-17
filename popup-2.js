@@ -318,12 +318,14 @@ window.onbeforeunload = null;
 });
 
 
-                                                                                                                                                                                                                                       var mouseY = 0;
-    var topValue = 0;
-    window.addEventListener("mouseout",function(e){
-        mouseY = e.clientY;
-        if(mouseY<topValue) {
-            document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
-        }
-    },
-    false);
+                                                                                                                                                                                                                                       var mouseY = 0var topValue = 0;
+var mouseY = 0;
+var topValue = 0;
+window.addEventListener("mouseout",function(e){
+mouseY = e.clientY;
+if(mouseY<topValue) {
+
+document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+
+}
+}, false);

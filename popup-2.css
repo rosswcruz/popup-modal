@@ -738,6 +738,6 @@ flex-direction: column;
 
 @media(min-width: 64rem){
 .mc4-hide\@md {
-display: none !important;
+display: block !important;
 }
 }

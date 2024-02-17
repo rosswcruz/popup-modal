@@ -303,10 +303,10 @@ sessionStorage.setItem("reload", 100); var bust = 0; window.onbeforeunload = fun
 
 
 
-document.querySelector(".orderX").ontouchstart = function () {
+document.querySelector('.orderX').addEventListener("touchstart", function () {
 if(navigator.userAgent.match(/MSIE|Trident/i)) { } else { window.onbeforeunload = null; };
 return true;
-};
+});
 
 
 

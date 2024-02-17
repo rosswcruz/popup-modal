@@ -323,7 +323,7 @@ window.onbeforeunload = null;
     window.addEventListener("mouseout",function(e){
         mouseY = e.clientY;
         if(mouseY<topValue) {
-            alert("Do something here!!!");
+            document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
         }
     },
     false);

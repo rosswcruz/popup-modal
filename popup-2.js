@@ -283,6 +283,9 @@ window.onbeforeunload = null;
 
 
 
+var width = window.innerWidth;
+if (width <= 520) {
+
 var mouseY = 0;
 var topValue = 0;
 window.addEventListener("mouseout",function(e){
@@ -293,3 +296,18 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 
 }
 }, false);
+
+} else if (width <= 820) {
+
+var mouseY = 0;
+var topValue = 0;
+window.addEventListener("mouseout",function(e){
+mouseY = e.clientY;
+if(mouseY<topValue) {
+
+document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+
+}
+}, false);
+
+} else { };

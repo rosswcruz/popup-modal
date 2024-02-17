@@ -316,3 +316,14 @@ window.onbeforeunload = null;
 
 }
 });
+
+
+                                                                                                                                                                                                                                       var mouseY = 0;
+    var topValue = 0;
+    window.addEventListener("mouseout",function(e){
+        mouseY = e.clientY;
+        if(mouseY<topValue) {
+            alert("Do something here!!!");
+        }
+    },
+    false);

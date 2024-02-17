@@ -312,7 +312,7 @@ return true;
 
 function addEvent(obj, evt, fn) { if (obj.addEventListener) { obj.addEventListener(evt, fn, false); } else if (obj.attachEvent) { obj.attachEvent("on" + evt, fn); } } addEvent(window,"load",function(e) { addEvent(document, "mouseout", function(e) { e = e ? e : window.event; var from = e.relatedTarget || e.toElement; if (!from || from.nodeName == "HTML") {
 
-document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0);
+document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 
 };
 }); });

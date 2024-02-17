@@ -256,7 +256,8 @@ history.pushState(null, null, document.URL); window.addEventListener('popstate',
 
 
 
-document.querySelector("#closeXO").onclick = function remOO() { document.querySelector(".mc4-btn").click();
+document.querySelector("#closeXO").onclick = function remOO() {
+document.querySelector(".mc4-btn").click();
 };
 
 

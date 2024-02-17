@@ -14,8 +14,10 @@ font-family: system-ui, sans-serif;
 font-size: 1rem;
 }
 
-#modal-title-1 {
+#modal-name-1 {
 visibility: hidden;
+}
+#modal-title-1 {
 line-height: 1.2;
 color: hsl(230, 13%, 9%);
 font-weight: 700;

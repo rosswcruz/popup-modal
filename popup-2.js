@@ -266,8 +266,10 @@ if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = n
 
 
 
-addEventListener('touchstart', function(e) {
+var width = window.innerWidth;
+if (width <= 520) {
 
+addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
@@ -281,24 +283,26 @@ window.onbeforeunload = null;
 }
 });
 
-
-
-var width = window.innerWidth;
-if (width <= 520) {
-
-var mouseY = 0;
-var topValue = 0;
-window.addEventListener("mouseout",function(e){
-mouseY = e.clientY;
-if(mouseY<topValue) {
-
-document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
-
-}
-}, false);
-
 } else if (width <= 820) {
 
+addEventListener('touchstart', function(e) {
+var myCN = e.target.className;
+if(myCN!='orderX'){
+
+sessionStorage.setItem("reload", 100);
+var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
+
+} else {
+
+window.onbeforeunload = null;
+
+}
+});
+
+} else { };
+
+
+
 var mouseY = 0;
 var topValue = 0;
 window.addEventListener("mouseout",function(e){
@@ -309,5 +313,3 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 
 }
 }, false);
-
-} else { };

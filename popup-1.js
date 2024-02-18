@@ -1,3 +1,7 @@
+if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { };
+
+
+
 var width = window.innerWidth;
 if (width <= 520) {
 
@@ -29,6 +33,8 @@ function myFunc(){
 myFunc = function(){};
 
 history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.pushState(null, null, document.URL); var x = document.querySelector(".modalOX"); if (window.getComputedStyle(x). visibility === "hidden") { x.style.visibility = "visible"; } else { x.style.visibility = "hidden"; }; setTimeout(function scroll() { window.scrollTo(0, 0); }, 200); }); ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, window.location.href); window.onpopstate = () => history.forward(); } } catch (o) {} }();
+
+sessionStorage.setItem("click", 500);
 
 };
 

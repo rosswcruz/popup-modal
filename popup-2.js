@@ -746,7 +746,7 @@ display: block !important;
 
 `;
 var styleSheet1 = document.createElement("style");
-styleSheet2.innerText = styles1;
+styleSheet1.innerText = styles1;
 document.head.appendChild(styleSheet1);
 
 

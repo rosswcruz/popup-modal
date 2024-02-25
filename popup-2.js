@@ -4,9 +4,11 @@ link1.href='https://popup-modal.pages.dev/popup-2.css';
 document.getElementsByTagName('head')[0].appendChild(link1);
 
 
+
 const demoX2 = document.querySelector('body');
 let html2 = '<button id="startAN" class="mc4-btn mc4-btn--primary" aria-controls="modal-name-1" style="margin-top: 250px!important; left: 50%; transform: translate(-50%, -50%); visibility: visible; pointer-events: none; position: absolute; left: -9999px; transform: scale(0);">Show modal window</button> <div id="modal-name-1" style="z-index: 300;" class="modal modal--animate-scale mc4-flex mc4-flex-center mc4-bg-black mc4-bg-opacity-90% mc4-padding-md js-modal"> <div class="modal__content mc4-width-100% mc4-max-width-xs mc4-max-height-100% mc4-overflow-auto mc4-bg mc4-radius-md mc4-inner-glow mc4-shadow-md" role="alertdialog" aria-labelledby="modal-title-1" aria-describedby="modal-description-1"> <header class="mc4-bg-contrast-lower mc4-bg-opacity-50% mc4-padding-y-sm mc4-padding-x-md mc4-flex mc4-items-center mc4-justify-between"> <h1 id="modal-title-1" class="mc4-text-truncate mc4-text-md">ALERT</h1> <button class="modal__close-btn modal__close-btn--inner mc4-hide@md js-modal__close js-tab-focus"> <svg class="mc4-icon mc4-icon--xs" viewBox="0 0 16 16"> <title>Close modal window</title> <g stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"> <line x1="13.5" y1="2.5" x2="2.5" y2="13.5"></line> <line x1="2.5" y1="2.5" x2="13.5" y2="13.5"></line> </g> </svg> </button> </header> <div class="mc4-padding-y-sm mc4-padding-x-md"> <div class="mc4-text-component"> <p id="modal-description-1">Please follow the on-screen steps to reach your destination link !</p> </div> </div> <footer class="mc4-padding-md"> <div class="mc4-flex mc4-justify-end mc4-gap-xs"> <button id="closeOX" class="mc4-btn mc4-btn--subtle js-modal__close">Cancel</button> <button id="closeXO" class="mc4-btn mc4-btn--primary">OK</button> </div> </footer> </div> <button id="closeAN" class="modal__close-btn modal__close-btn--outer mc4-display@md js-modal__close js-tab-focus"> <svg class="mc4-icon mc4-icon--sm" viewBox="0 0 24 24"> <title>Close modal window</title> <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <line x1="3" y1="3" x2="21" y2="21" /> <line x1="21" y1="3" x2="3" y2="21" /> </g> </svg> </button> </div>';
-demoX2.insertAdjacentHTML("beforeend", html2);
+demoX2.insertAdjacentHTML("afterbegin", html2);
+
 
 
 (function() {

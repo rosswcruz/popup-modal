@@ -1039,7 +1039,7 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; }; stopZZ(); }
+var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 } else {
 
@@ -1065,8 +1065,6 @@ window.onbeforeunload = null;
 });
 
 } else { };
-
-function stopZZ() { window.onbeforeunload = null; };
 
 
 

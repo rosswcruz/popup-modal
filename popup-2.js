@@ -1084,7 +1084,7 @@ myFuncQ();
 
 } else {
 
-one();
+
 
 }
 });
@@ -1099,7 +1099,7 @@ myFuncQ();
 
 } else {
 
-one();
+
 
 }
 });

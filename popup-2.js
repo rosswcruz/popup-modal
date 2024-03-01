@@ -1087,13 +1087,3 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 }, false);
 
 };
-
-
-
-
-
-
-
-sessionStorage.setItem("reload", 100);
-
-};

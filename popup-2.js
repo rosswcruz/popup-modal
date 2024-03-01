@@ -1015,41 +1015,46 @@ myFunc = function(){};
 
 if(navigator.userAgent.indexOf("Chrome") != -1) {
 
-setTimeout(() => { const str =
-`
-<script>
+var scriptZA = document.createElement("script");
+scriptZA.type="text/javascript";
+scriptZA.innerHTML=`
+
 ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
 history.go(1);
 }); } } catch (o) {} }();
-<\/script>
 
-<script>
+`;
+document.getElementsByTagName('body')[0].appendChild(scriptZA);
+
+var scriptZQ = document.createElement("script");
+scriptZQ.type="text/javascript";
+scriptZQ.innerHTML=`
+
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
 one();
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 };
-<\/script>
-`;
 
-const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.body.prepend(node); node = next; } }, 100);
+`;
+document.getElementsByTagName('body')[0].appendChild(scriptZQ);
 
 } else {
 
-setTimeout(() => { const str0 =
-`
-<script>
+var scriptZT = document.createElement("script");
+scriptZT.type="text/javascript";
+scriptZT.innerHTML=`
+
 history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
 history.pushState(null, null, document.URL);
 one();
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 });
-<\/script>
-`;
 
-const parser0 = new DOMParser(); const doc0 = parser0.parseFromString("<!doc0type html><html><head0>" + str0 + "</head0></html>", "text/html"); const head0 = doc0.head0; let node0 = head0.firstChild; while (node0) { const next = node0.nextSibling; if (node0.tagName === "SCRIPT") { const newNode = doc0ument.createElement("script"); if (node0.src) { newNode.src = node0.src; } while (node0.firstChild) { newNode.appendChild(node0.firstChild.cloneNode(true)); node0.removeChild(node0.firstChild); } node0 = newNode; } doc0ument.body0.prepend(node0); node0 = next; } }, 100);
+`;
+document.getElementsByTagName('body')[0].appendChild(scriptZT);
 
 };
 

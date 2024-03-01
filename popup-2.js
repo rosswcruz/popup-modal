@@ -1023,10 +1023,7 @@ setTimeout(() => { const str =
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
 
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML="window.removeEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
+one();
 
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
@@ -1064,6 +1061,11 @@ var scriptZS = document.createElement("script");
 scriptZS.type="text/javascript";
 scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
 document.getElementsByTagName('body')[0].appendChild(scriptZS);
+
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 sessionStorage.setItem("reload", 100);
 

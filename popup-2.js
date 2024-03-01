@@ -1022,10 +1022,16 @@ setTimeout(() => { const str =
 <script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
-setTimeout(function unload() {
-window.removeEventListener("beforeunload", addOB); }, 0);
+
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML="window.removeEventListener('beforeunload', addOB);";
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
+
 document.querySelector('#startAN').click();
+
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+
 };
 <\/script>
 

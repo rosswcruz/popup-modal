@@ -1051,18 +1051,13 @@ if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEvent
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener('touchstart', function(e) {
-var myCN = e.target.className;
-if(myCN!='orderX'){
+addEventListener('touchstart', function() {
 
 sessionStorage.setItem("reload", 100);
 function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
-} else {
 
-window.removeEventListener("beforeunload", addOB);
 
-}
 });
 
 } else if (width <= 820) {

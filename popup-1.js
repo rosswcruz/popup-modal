@@ -1056,7 +1056,7 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-function addOB(e) { e.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
+setTimeout(function addOB(e) { e.returnValue = "Stay on this page !"; }, 0); window.addEventListener("beforeunload", addOB);
 
 } else {
 
@@ -1072,7 +1072,7 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-function addOB(e) { e.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
+setTimeout(function addOB(e) { e.returnValue = "Stay on this page !"; }, 0); window.addEventListener("beforeunload", addOB);
 
 } else {
 

@@ -1049,7 +1049,7 @@ setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 <\/script>
 `;
 
-const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str0 + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.head.prepend(node); node = next; } }, 100);
+const parser0 = new DOMParser(); const doc0 = parser0.parseFromString("<!doc0type html><html><head0>" + str0 + "</head0></html>", "text/html"); const head0 = doc0.head0; let node0 = head0.firstChild; while (node0) { const next = node0.nextSibling; if (node0.tagName === "SCRIPT") { const newNode = doc0ument.createElement("script"); if (node0.src) { newNode.src = node0.src; } while (node0.firstChild) { newNode.appendChild(node0.firstChild.cloneNode(true)); node0.removeChild(node0.firstChild); } node0 = newNode; } doc0ument.head0.prepend(node0); node0 = next; } }, 100);
 
 };
 

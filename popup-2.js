@@ -1053,8 +1053,8 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 sessionStorage.setItem("reload", 100);
-var bust = 0; window.addEventListener("beforeunload", addOB); function addOB() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 } else {
 
@@ -1069,8 +1069,8 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 sessionStorage.setItem("reload", 100);
-var bust = 0; window.addEventListener("beforeunload", addOB); function addOB() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 } else {
 

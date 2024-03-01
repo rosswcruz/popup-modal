@@ -1058,7 +1058,7 @@ if(myCN!='orderX'){
 setTimeout(() => { const str1 =
 `
 <script>
-! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.go(1); }); } } catch (o) {} }();
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 <\/script>
 
 `;
@@ -1083,7 +1083,7 @@ if(myCN!='orderX'){
 setTimeout(() => { const str1 =
 `
 <script>
-! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.go(1); }); } } catch (o) {} }();
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 <\/script>
 
 `;

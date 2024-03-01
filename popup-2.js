@@ -1024,7 +1024,7 @@ history.go(1);
 }); } } catch (o) {} }();
 
 `;
-document.getElementsByTagName('body')[0].appendChild(scriptZA);
+document.getElementsByTagName('body')[0].prepend(scriptZA);
 
 var scriptZQ = document.createElement("script");
 scriptZQ.type="text/javascript";
@@ -1038,7 +1038,7 @@ one();
 };
 
 `;
-document.getElementsByTagName('body')[0].appendChild(scriptZQ);
+document.getElementsByTagName('body')[0].prepend(scriptZQ);
 
 } else {
 
@@ -1054,7 +1054,7 @@ one();
 });
 
 `;
-document.getElementsByTagName('body')[0].appendChild(scriptZT);
+document.getElementsByTagName('body')[0].prepend(scriptZT);
 
 };
 

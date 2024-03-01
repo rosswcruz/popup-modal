@@ -1022,9 +1022,7 @@ setTimeout(() => { const str =
 <script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
-
 one();
-
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 };
@@ -1046,7 +1044,9 @@ document.querySelector(".mc4-btn").click();
 
 
 
-if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 100); } else { };
+if(sessionStorage["reload"]) {
+one();
+} else { };
 
 
 
@@ -1071,7 +1071,7 @@ sessionStorage.setItem("reload", 100);
 
 } else {
 
-window.removeEventListener("beforeunload", addOB);
+one();
 
 }
 });
@@ -1082,12 +1082,21 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
+var scriptZS = document.createElement("script");
+scriptZS.type="text/javascript";
+scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
+document.getElementsByTagName('body')[0].appendChild(scriptZS);
+
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
+
 sessionStorage.setItem("reload", 100);
 
 } else {
 
-window.removeEventListener("beforeunload", addOB);
+one();
 
 }
 });

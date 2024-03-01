@@ -1051,9 +1051,8 @@ if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEvent
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener('touchstart', function(e) {
-var myCN = e.target.className;
-if(myCN!='orderX'){
+addEventListener('touchstart', function() {
+
 
 setTimeout(() => { const str1 =
 `
@@ -1067,11 +1066,6 @@ const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype ht
 
 sessionStorage.setItem("reload", 100);
 
-} else {
-
-window.removeEventListener("beforeunload", addOB);
-
-}
 });
 
 } else if (width <= 820) {

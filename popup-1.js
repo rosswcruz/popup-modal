@@ -1044,7 +1044,7 @@ document.querySelector(".mc4-btn").click();
 
 
 
-if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 100); } else { };
+
 
 
 
@@ -1097,7 +1097,8 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 
 
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.onbeforeunload = function() { addOB(); };
+
+
+
+if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 100); } else { };

@@ -1051,21 +1051,17 @@ if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEvent
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener('touchstart', function() {
-
-
-setTimeout(() => { const str1 =
-`
-<script>
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
-<\/script>
-
-`;
-
-const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str1 + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.head.prepend(node); node = next; } }, 100);
+addEventListener('touchstart', function(e) {
+var myCN = e.target.className;
+if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
 
+} else {
+
+window.removeEventListener("beforeunload", addOB);
+
+}
 });
 
 } else if (width <= 820) {
@@ -1074,17 +1070,8 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
-setTimeout(() => { const str1 =
-`
-<script>
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
-<\/script>
-
-`;
-
-const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str1 + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.head.prepend(node); node = next; } }, 100);
-
 sessionStorage.setItem("reload", 100);
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
 } else {
 
@@ -1107,3 +1094,7 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 
 }
 }, false);
+
+
+
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);

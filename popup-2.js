@@ -982,6 +982,9 @@ for( var i = 0; i < modalArrays.length; i++) {
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { };
 
 
+var scriptZE = document.createElement("script");
+scriptZE.type="text/javascript";
+scriptZE.innerHTML=`
 
 var width = window.innerWidth;
 if (width <= 520) {
@@ -1057,6 +1060,9 @@ document.getElementsByTagName('body')[0].appendChild(scriptZH);
 sessionStorage.setItem("reload", 100);
 
 };
+
+`;
+document.getElementsByTagName("body")[0].appendChild(scriptZE);
 
 
 

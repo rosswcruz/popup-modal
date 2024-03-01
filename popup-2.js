@@ -1029,7 +1029,7 @@ document.getElementsByTagName('body')[0].appendChild(scriptZQ);
 
 var scriptZR = document.createElement("script");
 scriptZR.type="text/javascript";
-scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); }); } } catch (o) {} }();';
+scriptZR.innerHTML='history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); });';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
 
 };

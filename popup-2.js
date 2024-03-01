@@ -1022,7 +1022,10 @@ setTimeout(() => { const str =
 <script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
-window.onbeforeunload = null; document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+setTimeout(function unload() {
+window.removeEventListener("beforeunload", addOB); }, 0);
+document.querySelector('#startAN').click();
+setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 };
 <\/script>
 
@@ -1042,7 +1045,7 @@ document.querySelector(".mc4-btn").click();
 
 
 
-if(sessionStorage["reload"]) { setTimeout(() => { window.removeEventListener("beforeunload", addOB); }, 0); } else { };
+if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 0); } else { };
 
 
 

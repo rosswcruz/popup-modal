@@ -986,7 +986,7 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener("touchstart", (event) => {
+addEventListener("touchstart", () => {
 
 myFunc();
 
@@ -994,7 +994,7 @@ myFunc();
 
 } else if (width <= 820) {
 
-addEventListener("touchstart", (event) => {
+addEventListener("touchstart", () => {
 
 myFunc();
 
@@ -1002,7 +1002,7 @@ myFunc();
 
 } else {
 
-addEventListener("mousedown", (event) => {
+addEventListener("mousedown", () => {
 
 myFunc();
 
@@ -1042,15 +1042,15 @@ scriptZR.type="text/javascript";
 scriptZR.innerHTML='history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); alert("hu"); one(); });';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
+var scriptZI = document.createElement("script");
+scriptZI.type="text/javascript";
+scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
+document.getElementsByTagName('body')[0].appendChild(scriptZI);
 
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
+var scriptZH = document.createElement("script");
+scriptZH.type="text/javascript";
+scriptZH.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
+document.getElementsByTagName('body')[0].appendChild(scriptZH);
 
 };
 

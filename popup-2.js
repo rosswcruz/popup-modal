@@ -1057,15 +1057,9 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
+function one() { window.removeEventListener("beforeunload", addOB); };
 
 sessionStorage.setItem("reload", 100);
 
@@ -1082,15 +1076,9 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
+function one() { window.removeEventListener("beforeunload", addOB); };
 
 sessionStorage.setItem("reload", 100);
 

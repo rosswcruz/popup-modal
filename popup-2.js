@@ -1042,7 +1042,7 @@ document.querySelector(".mc4-btn").click();
 
 
 
-if(sessionStorage["reload"]) { setTimeout(function() { window.onbeforeunload = null; },0); } else { };
+if(sessionStorage["reload"]) { setTimeout(() => { window.removeEventListener("beforeunload", addOB); }, 0); } else { };
 
 
 
@@ -1054,11 +1054,11 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
+var bust = 0; window.addEventListener("beforeunload", addOB); function addOB() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 } else {
 
-window.onbeforeunload = null;
+window.removeEventListener("beforeunload", addOB);
 
 }
 });
@@ -1070,11 +1070,11 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-var bust = 0; window.onbeforeunload = function() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
+var bust = 0; window.addEventListener("beforeunload", addOB); function addOB() { if (bust === 0) { bust++; return 'Stay on this page !'; } }
 
 } else {
 
-window.onbeforeunload = null;
+window.removeEventListener("beforeunload", addOB);
 
 }
 });

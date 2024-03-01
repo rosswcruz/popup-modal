@@ -1022,7 +1022,7 @@ setTimeout(() => { const str =
 <script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
-setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 0);
+setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 100);
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 };
@@ -1044,20 +1044,25 @@ document.querySelector(".mc4-btn").click();
 
 
 
-if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 0); } else { };
+if(sessionStorage["reload"]) { setTimeout(function unload() { window.removeEventListener("beforeunload", addOB); }, 100); } else { };
 
 
 
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener('touchstart', function() {
+addEventListener('touchstart', function(e) {
+var myCN = e.target.className;
+if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
+setTimeout(function addOB(en) { en.returnValue = "Stay on this page !"; }, 0); window.addEventListener("beforeunload", addOB);
 
+} else {
 
+window.removeEventListener("beforeunload", addOB);
 
+}
 });
 
 } else if (width <= 820) {
@@ -1067,7 +1072,7 @@ var myCN = e.target.className;
 if(myCN!='orderX'){
 
 sessionStorage.setItem("reload", 100);
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);
+setTimeout(function addOB(en) { en.returnValue = "Stay on this page !"; }, 0); window.addEventListener("beforeunload", addOB);
 
 } else {
 

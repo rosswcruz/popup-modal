@@ -1050,7 +1050,7 @@ var scriptZI = document.createElement("script");
 scriptZI.type="text/javascript";
 scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
 document.getElementsByTagName('body')[0].appendChild(scriptZI);
-}, 1000);
+}, 5000);
 
 var scriptZH = document.createElement("script");
 scriptZH.type="text/javascript";

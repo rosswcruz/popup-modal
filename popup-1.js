@@ -1097,4 +1097,4 @@ document.querySelector('#startAN').click(); setTimeout(function scroll() { windo
 
 
 
-function addOB(en) { en.returnValue = "Stay on this page !"; }; window.onbeforeunload = function() { addOB(); };
+function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);

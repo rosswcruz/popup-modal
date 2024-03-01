@@ -982,9 +982,6 @@ for( var i = 0; i < modalArrays.length; i++) {
 if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); } else { };
 
 
-var scriptZE = document.createElement("script");
-scriptZE.type="text/javascript";
-scriptZE.innerHTML=`
 
 var width = window.innerWidth;
 if (width <= 520) {
@@ -1025,60 +1022,27 @@ document.getElementsByTagName("body")[0].appendChild(scriptZA);
 
 var scriptZQ = document.createElement("script");
 scriptZQ.type="text/javascript";
-scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); setTimeout(function scroll() { window.scrollTo(0, 500); }, 200); one(); };';
+scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); };';
 document.getElementsByTagName('body')[0].appendChild(scriptZQ);
-
-var scriptZS = document.createElement("script");
-scriptZS.type="text/javascript";
-scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
-document.getElementsByTagName('body')[0].appendChild(scriptZS);
-
-var scriptZN = document.createElement("script");
-scriptZN.type="text/javascript";
-scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
-document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 } else {
 
 var scriptZR = document.createElement("script");
 scriptZR.type="text/javascript";
-scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); setTimeout(function scroll() { window.scrollTo(0, 500); }, 200); one(); }); } } catch (o) {} }();';
+scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); }); } } catch (o) {} }();';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
-
-setTimeout(function maxZW() {
-var scriptZI = document.createElement("script");
-scriptZI.type="text/javascript";
-scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
-document.getElementsByTagName('body')[0].appendChild(scriptZI);
-}, 1000);
-
-var scriptZH = document.ceateElement("script");
-scriptZH.type="text/javascript";
-scriptZH.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
-document.getElementsByTagName('body')[0].appendChild(scriptZH);
 
 };
 
 sessionStorage.setItem("click", 100);
 
-sessionStorage.setItem("reload", 100);
-
 };
-
-`;
-document.getElementsByTagName("body")[0].appendChild(scriptZE);
 
 
 
 document.querySelector("#closeXO").onclick = function remOO() {
 document.querySelector(".mc4-btn").click();
 };
-
-
-
-if(sessionStorage["reload"]) {
-one();
-} else { };
 
 
 

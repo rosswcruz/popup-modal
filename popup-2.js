@@ -1022,7 +1022,7 @@ setTimeout(() => { const str =
 <script>
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
-setTimeout(function unload() { window.onbeforeunload = null; }, 0); document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
+window.onbeforeunload = null; document.querySelector('#startAN').click(); setTimeout(function scroll() { window.scrollTo(0, 0); }, 200);
 };
 <\/script>
 

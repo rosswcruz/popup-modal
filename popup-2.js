@@ -1076,6 +1076,19 @@ mouseY = e.clientY;
 if(mouseY<topValue) {
 
 document.querySelector('#startAN').click();
+myFuncX();
+
+} else {
+
+one();
+
+};
+}, false);
+
+};
+
+function myFuncX(){
+myFuncX = function(){};
 
 var scriptZ9 = document.createElement("script");
 scriptZ9.type="text/javascript";
@@ -1086,12 +1099,5 @@ var scriptZ8 = document.createElement("script");
 scriptZ8.type="text/javascript";
 scriptZ8.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
 document.getElementsByTagName('body')[0].appendChild(scriptZ8);
-
-} else {
-
-one();
-
-};
-}, false);
 
 };

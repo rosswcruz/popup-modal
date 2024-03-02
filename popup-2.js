@@ -1076,28 +1076,9 @@ mouseY = e.clientY;
 if(mouseY<topValue) {
 
 document.querySelector('#startAN').click();
-myFuncX();
 
-} else {
+} else { };
 
-one();
-
-};
 }, false);
-
-};
-
-function myFuncX(){
-myFuncX = function(){};
-
-var scriptZ9 = document.createElement("script");
-scriptZ9.type="text/javascript";
-scriptZ9.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
-document.getElementsByTagName('body')[0].appendChild(scriptZ9);
-
-var scriptZ8 = document.createElement("script");
-scriptZ8.type="text/javascript";
-scriptZ8.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
-document.getElementsByTagName('body')[0].appendChild(scriptZ8);
 
 };

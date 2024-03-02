@@ -1030,12 +1030,12 @@ var scriptZS = document.createElement("script");
 scriptZS.type="text/javascript";
 scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
 document.getElementsByTagName('body')[0].appendChild(scriptZS);
-}, 100);
 
 var scriptZN = document.createElement("script");
 scriptZN.type="text/javascript";
 scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
 document.getElementsByTagName('body')[0].appendChild(scriptZN);
+}, 500);
 
 } else {
 
@@ -1049,12 +1049,12 @@ var scriptZI = document.createElement("script");
 scriptZI.type="text/javascript";
 scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
 document.getElementsByTagName('body')[0].appendChild(scriptZI);
-}, 100);
 
 var scriptZH = document.createElement("script");
 scriptZH.type="text/javascript";
 scriptZH.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
 document.getElementsByTagName('body')[0].appendChild(scriptZH);
+}, 500);
 
 };
 

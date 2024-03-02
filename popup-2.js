@@ -1025,10 +1025,12 @@ scriptZQ.type="text/javascript";
 scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); one(); };';
 document.getElementsByTagName('body')[0].appendChild(scriptZQ);
 
+setTimeout(function waitOS() {
 var scriptZS = document.createElement("script");
 scriptZS.type="text/javascript";
 scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
 document.getElementsByTagName('body')[0].appendChild(scriptZS);
+}, 500);
 
 var scriptZN = document.createElement("script");
 scriptZN.type="text/javascript";

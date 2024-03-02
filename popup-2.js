@@ -1022,15 +1022,35 @@ document.getElementsByTagName("body")[0].appendChild(scriptZA);
 
 var scriptZQ = document.createElement("script");
 scriptZQ.type="text/javascript";
-scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); };';
+scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); one(); };';
 document.getElementsByTagName('body')[0].appendChild(scriptZQ);
+
+var scriptZS = document.createElement("script");
+scriptZS.type="text/javascript";
+scriptZS.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
+document.getElementsByTagName('body')[0].appendChild(scriptZS);
+
+var scriptZN = document.createElement("script");
+scriptZN.type="text/javascript";
+scriptZN.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
+document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 } else {
 
 var scriptZR = document.createElement("script");
 scriptZR.type="text/javascript";
-scriptZR.innerHTML='history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); });';
+scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); one(); }); } } catch (o) {} }();';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
+
+var scriptZI = document.createElement("script");
+scriptZI.type="text/javascript";
+scriptZI.innerHTML='function addOB(en) { en.returnValue = "Stay on this page !"; }; window.addEventListener("beforeunload", addOB);';
+document.getElementsByTagName('body')[0].appendChild(scriptZI);
+
+var scriptZH = document.createElement("script");
+scriptZH.type="text/javascript";
+scriptZH.innerHTML='function one() { window.removeEventListener("beforeunload", addOB); }';
+document.getElementsByTagName('body')[0].appendChild(scriptZH);
 
 };
 

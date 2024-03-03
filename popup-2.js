@@ -1022,7 +1022,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptZA);
 
 var scriptZQ = document.createElement("script");
 scriptZQ.type="text/javascript";
-scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); one(); };';
+scriptZQ.innerHTML='window.history.pushState(null, null, window.location.href); window.onpopstate = function () { document.querySelector(".mc4-btn").click(); if (typeof(one) === "function") { one.apply(this); } else { }; };';
 document.getElementsByTagName('body')[0].appendChild(scriptZQ);
 
 setTimeout(function waitXQ() {
@@ -1041,7 +1041,7 @@ document.getElementsByTagName('body')[0].appendChild(scriptZN);
 
 var scriptZR = document.createElement("script");
 scriptZR.type="text/javascript";
-scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); one(); }); } } catch (o) {} }();';
+scriptZR.innerHTML='! function () { var t; try { for (t = 0; 10 > t; ++t) history.pushState({}, ""); onpopstate = function (t) { t.state && history.pushState(null, null, document.URL); window.addEventListener("popstate", function () { history.pushState(null, null, document.URL); document.querySelector(".mc4-btn").click(); if (typeof(one) === "function") { one.apply(this); } else { }; }); } } catch (o) {} }();';
 document.getElementsByTagName('body')[0].appendChild(scriptZR);
 
 setTimeout(function waitQX() {

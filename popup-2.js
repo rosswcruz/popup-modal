@@ -1058,7 +1058,7 @@ document.getElementsByTagName('body')[0].appendChild(scriptZH);
 
 };
 
-sessionStorage.setItem("click", 100);
+if(sessionStorage["click"]) { } else { sessionStorage.setItem("click", 100); };
 
 };
 

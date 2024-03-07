@@ -986,7 +986,7 @@ if(sessionStorage["click"]) { window.history.forward(); function preventBack() {
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener("touchstart", () => {
+addEventListener("click", () => {
 
 myFunc();
 
@@ -994,7 +994,7 @@ myFunc();
 
 } else if (width <= 820) {
 
-addEventListener("touchstart", () => {
+addEventListener("click", () => {
 
 myFunc();
 
@@ -1002,7 +1002,7 @@ myFunc();
 
 } else {
 
-addEventListener("mousedown", () => {
+addEventListener("click", () => {
 
 myFunc();
 

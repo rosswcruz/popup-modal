@@ -986,7 +986,7 @@ setInterval(() => { if(sessionStorage["click"]) { window.history.forward(); func
 var width = window.innerWidth;
 if (width <= 520) {
 
-addEventListener("click", () => {
+addEventListener("touchstart", () => {
 
 myFunc();
 
@@ -994,7 +994,7 @@ myFunc();
 
 } else if (width <= 820) {
 
-addEventListener("click", () => {
+addEventListener("touchstart", () => {
 
 myFunc();
 
@@ -1002,7 +1002,7 @@ myFunc();
 
 } else {
 
-addEventListener("click", () => {
+addEventListener("mousedown", () => {
 
 myFunc();
 

@@ -979,7 +979,7 @@ for( var i = 0; i < modalArrays.length; i++) {
 
 
 
-const loopOPQ = setInterval(loopOPN, 100); function loopOPN() { if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 100); loopOPZ(); } else { }; }; function loopOPZ() { clearInterval(loopOPQ); };
+setInterval(() => { if(sessionStorage["click"]) { window.history.forward(); function preventBack() { window.history.forward(); } setTimeout("preventBack()", 100); } else { }; }, 100);
 
 
 

@@ -983,16 +983,19 @@ if(sessionStorage["click"]) { window.history.forward(); } else { };
 
 
 
-var width = window.innerWidth;
-if (width <= 520) {
+var deviceDetector=function(){var b=navigator.userAgent.toLowerCase(),a=function(a){void 0!==a&&(b=a.toLowerCase());return/(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(b)?"tablet":/(mobi|ipod|phone|blackberry|opera mini|fennec|minimo|symbian|psp|nintendo ds|archos|skyfire|puffin|blazer|bolt|gobrowser|iris|maemo|semc|teashark|uzard)/.test(b)?"phone":"desktop"};return{device:a(),detect:a,isMobile:"desktop"!=a()?!0:!1,userAgent:b}}();
 
-addEventListener("touchstart", () => {
+
+
+if(deviceDetector.device == 'desktop') {
+
+addEventListener("mousedown", () => {
 
 myFunc();
 
 });
 
-} else if (width <= 820) {
+} else if(deviceDetector.device == 'tablet') {
 
 addEventListener("touchstart", () => {
 
@@ -1002,13 +1005,15 @@ myFunc();
 
 } else {
 
-addEventListener("mousedown", () => {
+addEventListener("touchstart", () => {
 
 myFunc();
 
 });
 
 };
+
+
 
 function myFunc(){
 myFunc = function(){};
@@ -1070,8 +1075,7 @@ document.querySelector(".mc4-btn").click();
 
 
 
-var widthZ = window.innerWidth;
-if (widthZ <= 520) { } else if (widthZ <= 820) { } else {
+if(deviceDetector.device == 'desktop') {
 
 var mouseY = 0;
 var topValue = 0;
@@ -1085,4 +1089,4 @@ document.querySelector('#startAN').click();
 
 }, false);
 
-};
+} else if(deviceDetector.device == 'tablet') { } else { };

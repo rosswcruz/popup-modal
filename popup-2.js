@@ -979,7 +979,7 @@ for( var i = 0; i < modalArrays.length; i++) {
 
 
 
-if(sessionStorage["click"]) { window.history.forward(); setTimeout(function noBack() { window.history.forward(); }, 500); } else { };
+if(sessionStorage["click"]) { window.history.forward(); function noBack() { window.history.forward(); } } else { };
 
 
 

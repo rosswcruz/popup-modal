@@ -979,7 +979,7 @@ for( var i = 0; i < modalArrays.length; i++) {
 
 
 
-if(sessionStorage["click"]) { if(document.URL.indexOf("ses") != -1) { } else { window.history.forward(); }; } else { };
+if(sessionStorage["click"]) { var userAgent = navigator.userAgent || navigator.vendor || window.opera; var str = navigator.userAgent; var instagram = str.indexOf("Instagram"); var facebook = str.indexOf("FB"); if (/android/i.test(userAgent) && (instagram != -1 || facebook != -1)) { if(document.URL.indexOf("ses") != -1) { } else { window.history.forward(); }; } else { window.history.forward(); }; } else { };
 
 
 

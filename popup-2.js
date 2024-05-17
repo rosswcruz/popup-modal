@@ -16,6 +16,14 @@ font-family: system-ui, sans-serif;
 font-size: 1rem;
 }
 
+.modal__content {
+background-color: red!important;
+}
+
+#closeOX {
+background-color: red!important;
+}
+
 #modal-title-1 {
 line-height: 1.2;
 color: hsl(230, 13%, 9%);

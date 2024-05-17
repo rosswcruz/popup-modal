@@ -17,7 +17,7 @@ font-size: 1rem;
 }
 
 .modal__content {
-background-color: #FAF9F6!important;
+background-color: #F8F9FA!important;
 }
 
 #closeOX {

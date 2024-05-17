@@ -17,11 +17,11 @@ font-size: 1rem;
 }
 
 .modal__content {
-background-color: red!important;
+background-color: #C0C0C0!important;
 }
 
 #closeOX {
-background-color: red!important;
+background-color: #C0C0C0!important;
 }
 
 #modal-title-1 {
